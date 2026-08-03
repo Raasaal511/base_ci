@@ -7,7 +7,11 @@ app = FastAPI(title="Base CI Project")
 class Item(BaseModel):
     name: str
     price: float
+
+
 items: dict[str, Item] = {}
+
+
 @app.get("/")
 def read_root() -> dict[str, str]:
     return {"message": "Hello, World!"}
